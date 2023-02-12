@@ -2,7 +2,7 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-const url = 'http://api.openweathermap.org/geo/1.0/direct?q=';
+const url = 'https://api.openweathermap.org/geo/1.0/direct?q=';
 const apiKey = process.env.OPENWEATHER_API_KEY;
 
 const getLocationData = async (cityName) => {
