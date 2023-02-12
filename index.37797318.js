@@ -578,7 +578,7 @@ form.addEventListener("submit", async (e)=>{
         document.querySelector("input").placeholder = "City name e.g. New York";
         document.querySelector("input").classList.remove("invalid");
         const { temperature , conditions , city , country  } = await (0, _renderJsDefault.default)(cityName);
-        cityDiv.textContent = city;
+        cityDiv.textContent = `${city}, `;
         countryDiv.textContent = country;
         temperatureDiv.textContent = `${Math.round(temperature)}°C`;
         conditionsDiv.textContent = conditions;
