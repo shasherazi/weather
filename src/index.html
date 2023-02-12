@@ -5,10 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/index.css" />
-    <script src="./modules/index.js" defer></script>
+    <script src="./modules/index.js" type="module" defer></script>
     <title>weather</title>
   </head>
   <body>
-    <h1>Hello world</h1>
+    <main class="main">
+      <h1 class="main-heading">
+        Get the current weather for your location now!
+      </h1>
+
+      <form class="form">
+        <input
+          type="text"
+          class="form-input"
+          placeholder="City name e.g. New York"
+        />
+        <button class="form-btn">Get Weather</button>
+      </form>
+      <section class="weather">
+        18
+      </section>
+    </main>
   </body>
 </html>
