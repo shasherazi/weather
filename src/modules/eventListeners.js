@@ -21,7 +21,7 @@ form.addEventListener('submit', async (e) => {
       city,
       country,
     } = await getCurrentWeather(cityName);
-    cityDiv.textContent = city;
+    cityDiv.textContent = `${city}, `;
     countryDiv.textContent = country;
     temperatureDiv.textContent = `${Math.round(temperature)}°C`;
     conditionsDiv.textContent = conditions;
