@@ -2,6 +2,7 @@ import getCurrentWeather from './rendering/render.js';
 
 const form = document.querySelector('form');
 const cityDiv = document.querySelector('.weather-city');
+const countryDiv = document.querySelector('.weather-country');
 const temperatureDiv = document.querySelector('.weather-temp');
 const conditionsDiv = document.querySelector('.weather-conditions');
 
@@ -17,11 +18,11 @@ form.addEventListener('submit', async (e) => {
     const {
       temperature,
       conditions,
-      icon,
       city,
+      country,
     } = await getCurrentWeather(cityName);
-    console.log(temperature, conditions, icon, city);
     cityDiv.textContent = city;
+    countryDiv.textContent = country;
     temperatureDiv.textContent = `${Math.round(temperature)}°C`;
     conditionsDiv.textContent = conditions;
   }
